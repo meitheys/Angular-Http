@@ -19,7 +19,7 @@ export class UsuarioService {
 
   //Getting the usuary
   getUsuario(id: number): Observable<any>{
-    return this.http.get(`${this.url+'/findById'}/${id}`);
+   return this.http.get(`${this.url+'/findById'}/${id}`);
   }
 
   getUsuarioList(): Observable<Usuario[]> {

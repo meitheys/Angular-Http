@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="box">
+
+  <form  #usuarioForm="ngForm" (ngSubmit)="onSubmit()">
+  <input type="text" required="required" class="form-control nameInput" id="login" [(ngModel)]="fornecedor.razao" name="razao" placeholder="Razão Social">
+    <small id="razaoHelp" class="form-text text-muted">Put your social reason here</small>
+      <br>
+    <input type="text" required="required" class="form-control nameInput" id="login" [(ngModel)]="fornecedor.cnpj" name="cnpj" placeholder="CNPJ">
+        <small id="cnpjHelp" class="form-text text-muted">Put your cnpj here</small>
+            <br>
+    <input type="text" required="required" class="form-control passwordInput" [(ngModel)]="fornecedor.nome" name="nome" placeholder="Nome">
+        <small id="nomeHelp" class="form-text text-muted">Put your name here</small>
+        <br>          
+    <input type="text" class="form-control passwordInput" placeholder="Endereço" [(ngModel)]="fornecedor.endereco" name="endereco" id="endereco">
+        <small id="enderecoHelp" class="form-text text-muted">Put your adress here</small>
+            <br>
+            
+    <input type="text" class="form-control passwordInput" placeholder="Telefone" [(ngModel)]="fornecedor.telefone" name="telefone" id="telefone">
+        <small id="telefoneHelp" class="form-text text-muted">Put your name here</small>    
+            <br>
+    <input type="text" class="form-control passwordInput" placeholder="Email" [(ngModel)]="fornecedor.email" name="email" id="email">
+        <small id="emailHelp" class="form-text text-muted">Put your email here</small>
+        <br>
+                <hr class="linhaLogin">
+    <input type="submit" class="btn btn-primary buttonRegist" onclick="shake()" >
+    </form>
+      
+    </div>
+  </div>
+
+  <!-- <table class="table-striped tabelazinha">
+    <thead>
+        <tr>
+            <th>Usuario</th>
+              <th>Senha</th>
+              <th>Uuid</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios">
+            <td>{{ usuario.login }}</td>
+            <td>{{ usuario.senha }}</td>
+            <td>{{ usuario.uuid }}</td>
+        </tr>
+    </tbody>
+</table> -->

@@ -1,0 +1,18 @@
+#navigation{
+    background-color: #646bc4;
+    height: 60px;
+}
+
+#spanNavigation{
+    margin-left: 10px;
+    color: white;
+    font-size: 40px;
+    font-family: didot;
+}
+
+#hbLogo{
+    margin-bottom: 1.25%;
+    margin-left: 1%;
+    width: 8%;
+} 
+

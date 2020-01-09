@@ -1,41 +1,49 @@
-<div class="container">
-      <div class="box">
 
+<div class="container rounded">
+  <div class="row">
+<div class="col-12 boxLogin">
+
+    <h1 class="registro">Sign Up</h1>
+    <hr>
+  <br>
     <form  #usuarioForm="ngForm" (ngSubmit)="onSubmit()">
     <input type="text" required="required" class="form-control nameInput" id="login" [(ngModel)]="usuario.login" name="login" placeholder="Login">
       <small id="emailHelp" class="form-text text-muted">Put your login here</small>
         <br>
+        
     <input type="password" required="required" class="form-control passwordInput" [(ngModel)]="usuario.senha" name="senha" placeholder="Password">
     <br>
         <hr class="linhaLogin">
-    <input type="hidden" class="form-control passwordInput" placeholder="UUID" [(ngModel)]="usuario.uuid" id="uuid">
+    <input type="text" class="form-control passwordInput" placeholder="UUID" [(ngModel)]="usuario.uuid" id="uuid">
         <br>
           <br>
             <input type="submit" class="btn btn-primary buttonRegist" onclick="shake()" >
          
           </form>
-          
-      </div>
-    </div>
+</div>
+</div>
 
+   <div class="row">
+     <div class="col-12">
     <table class="table-striped tabelazinha">
       <thead>
           <tr>
-              <th>Usuario</th>
-                <th>Senha</th>
-                <th>Uuid</th>
+              <th class="th">Usuario</th>
+                <th class="th">Senha</th>
+                <th class="th">Uuid</th>
           </tr>
       </thead>
       <tbody>
           <tr *ngFor="let usuario of usuarios">
-              <td>{{ usuario.login }}</td>
-              <td>{{ usuario.senha }}</td>
-              <td>{{ usuario.uuid }}</td>
+              <td class="td">{{ usuario.login }}</td>
+              <td class="td">{{ usuario.senha }}</td>
+              <td class="td">{{ usuario.uuid }}</td>
           </tr>
       </tbody>
   </table>
-    
-  
+</div>
+</div>
+</div>
 
 
 <!-- <div class="container">

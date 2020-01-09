@@ -1,62 +1,66 @@
-.container{
-    width: 100vw;
-    height: 45vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 
-.box {
-    width: 300px;
-    height: 300px;
-    background: #fff;
-}
-
-.nameInput{
-    opacity: 0.9;
-}
-
-.linhaLogin{
-    margin-right: 230px;
-    width: 20%;
-    margin-left: 35%;
-}
-
-.nameInput:hover{
-    opacity: 1;
-}
-
-#emailHelp{
-    margin-left: 100px;
-}
-
-.passwordInput{
-    opacity: 0.9;
-}
-
-.passwordInput:hover{
-    opacity: 1;
-}
-
-.buttonRegist{
-    width: 25%;
-    border-radius: 15px;
-    opacity: 0.6;
-    margin-left: 33%;
-}
-
-.buttonRegist:hover {
-    opacity: 1;
+.boxLogin{
+    width: 30%;
+    margin-top: 20px;
+    }
     
-  }
+    .nameInput, .passwordInput{
+        /* margin-left: 35%; */
+    /* width: 30%; */
+        opacity: 0.9;
+    }
+    
+    .linhaLogin{
+        margin-right: 230px;
+        width: 20%;
+        margin-left: 40%;
+    }
+    
+    .nameInput:hover{
+        opacity: 1;
+    }
+    
+    #emailHelp{
+        margin-left: 45%;
+    }
+    
+    .passwordInput{
+        opacity: 0.9;
+    }
+    
+    .passwordInput:hover{
+        opacity: 1;
+    }
+    
+    .buttonRegist{
+        width: 25%;
+        border-radius: 15px;
+        opacity: 0.6;
+        margin-left: 38%;
+    }
+    
+    .buttonRegist:hover {
+        opacity: 1;
+      }
+    
+    .tabelazinha{
+        margin-top: 40px;
+        width: 100%;
+    }
 
-.col-12{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
- 
-.tabelazinha{
-    margin-top: 40px;
-}
+    .boxTable{
+        margin-left: 25%;
+    }
+
+    .registro{
+        margin-left: 43%;
+    }
+
+    .td{
+        height: 70px;
+        
+    }
+
+    .th{
+        font-size: 25px;
+    }
