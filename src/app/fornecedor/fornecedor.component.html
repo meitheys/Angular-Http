@@ -1,6 +1,9 @@
-<div class="container">
-    <div class="box">
-
+<div class="container rounded total">
+    <div class="row">
+        <div class="col-12 boxLogin">
+            <h1 class="registro">Provider Sign Up</h1>
+    <hr>
+    <br>
   <form  #usuarioForm="ngForm" (ngSubmit)="onSubmit()">
   <input type="text" required="required" class="form-control nameInput" id="login" [(ngModel)]="fornecedor.razao" name="razao" placeholder="Razão Social">
     <small id="razaoHelp" class="form-text text-muted">Put your social reason here</small>
@@ -14,7 +17,6 @@
     <input type="text" class="form-control passwordInput" placeholder="Endereço" [(ngModel)]="fornecedor.endereco" name="endereco" id="endereco">
         <small id="enderecoHelp" class="form-text text-muted">Put your adress here</small>
             <br>
-            
     <input type="text" class="form-control passwordInput" placeholder="Telefone" [(ngModel)]="fornecedor.telefone" name="telefone" id="telefone">
         <small id="telefoneHelp" class="form-text text-muted">Put your name here</small>    
             <br>
@@ -25,10 +27,9 @@
     <input type="submit" class="btn btn-primary buttonRegist" onclick="shake()" >
     </form>
       
-    </div>
-  </div>
 
-  <!-- <table class="table-striped tabelazinha">
+
+<table class="table-striped tabelazinha">
     <thead>
         <tr>
             <th>Usuario</th>
@@ -37,10 +38,14 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let usuario of usuarios">
+        <tr *ngFor="let fornecedor of fornecedores">
             <td>{{ usuario.login }}</td>
             <td>{{ usuario.senha }}</td>
             <td>{{ usuario.uuid }}</td>
         </tr>
     </tbody>
-</table> -->
+</table>
+
+</div>
+</div>
+<div>

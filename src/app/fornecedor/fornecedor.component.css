@@ -1,18 +1,17 @@
-/* .container{
-    width: 100vw;
-    height: 45vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-} */
-
-.box {
-    width: 300px;
-    height: 300px;
-    background: #fff;
+.boxLogin{
+    width: 30%;
+    margin-top: 20px;
 }
 
+.total{
+    transition: 30ms;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    -webkit-box-shadow: 2px 2px 8px #999; 
+    -moz-box-shadow: 2px 2px 8px #999;
+        box-shadow: 2px 2px 8px #999;	
+}
+    
 .nameInput{
     opacity: 0.9;
 }
@@ -20,7 +19,7 @@
 .linhaLogin{
     margin-right: 230px;
     width: 20%;
-    margin-left: 35%;
+    margin-left: 40%;
 }
 
 .nameInput:hover{
@@ -28,11 +27,11 @@
 }
 
 #razaoHelp{
-    margin-left: 75px;
+    margin-left: 43%;
 }
 
 #emailHelp, #nomeHelp, #enderecoHelp, #telefoneHelp, #cnpjHelp{
-    margin-left: 85px;
+    margin-left: 45%;
 }
 
 .passwordInput{
@@ -47,20 +46,17 @@
     width: 25%;
     border-radius: 15px;
     opacity: 0.6;
-    margin-left: 33%;
+    margin-left: 38%;
 }
 
 .buttonRegist:hover {
     opacity: 1;
-    
-  }
-
-.col-12{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
- 
+
 .tabelazinha{
     margin-top: 40px;
+}
+
+.registro{
+    margin-left: 38%;
 }
