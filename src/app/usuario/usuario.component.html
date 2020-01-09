@@ -1,5 +1,5 @@
 
-<div class="container rounded">
+<div class="container rounded total">
   <div class="row">
 <div class="col-12 boxLogin">
 
@@ -13,10 +13,11 @@
         
     <input type="password" required="required" class="form-control passwordInput" [(ngModel)]="usuario.senha" name="senha" placeholder="Password">
     <br>
-        <hr class="linhaLogin">
+        <br>
     <input type="text" class="form-control passwordInput" placeholder="UUID" [(ngModel)]="usuario.uuid" id="uuid">
         <br>
           <br>
+          <hr class="linhaLogin">
             <input type="submit" class="btn btn-primary buttonRegist" onclick="shake()" >
          
           </form>

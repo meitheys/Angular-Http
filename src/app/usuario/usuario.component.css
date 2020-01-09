@@ -46,6 +46,7 @@
     .tabelazinha{
         margin-top: 40px;
         width: 100%;
+        text-align: center;
     }
 
     .boxTable{
@@ -63,4 +64,13 @@
 
     .th{
         font-size: 25px;
+    }
+
+    .total{
+        transition: 30ms;
+        background-color: #FFFFFF;
+        border-radius: 6px;
+        -webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;	
     }
