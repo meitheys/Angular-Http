@@ -7,11 +7,25 @@
     margin-left: 25%;
     background-color: white;
     border-radius: 6px;
+    -webkit-box-shadow: 2px 2px 8px #999; 
+    -moz-box-shadow: 2px 2px 8px #999;
+        box-shadow: 2px 2px 8px #999;	
 }
 
 #usuarioLogin, #usuarioSenha{
     margin-top: 8%;
+    transition: all 0.5s;
 } 
+
+#usuarioLogin:focus{
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+}
+
+#usuarioSenha:focus{
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+}
 
 #botaoLogin{
     display: block; 

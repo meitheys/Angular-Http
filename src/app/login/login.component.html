@@ -2,20 +2,22 @@
     <div class="row containerRow">
         <div class="col-6 containerCol">
                     <br>
-            <h1 class="registro">Sign Up</h1>
+                    <form>
+            <h1 class="registro">Sign In</h1>
                 <hr>
                     <br>
-                <input type="text" required="required" class="form-control" id="usuarioLogin" name="login" placeholder="Login">
+                <input type="text" required="required" [(ngModel)]="nome" class="form-control" id="usuarioLogin" name="nome" placeholder="Login">
                         <small id="small">Put here your Login</small>
                     <br>
-                <input type="password" required="required" class="form-control" id="usuarioSenha" name="senha" placeholder="Password">
+                <input type="password" required="required" [(ngModel)]="senha" class="form-control" id="usuarioSenha" name="senha" placeholder="Password">
                         <small id="small">Put here your Password</small>
                     <br>
                 <input type="checkbox" id="check">
                         <small>Manter-me logado</small>
                     <br>
                     <br>
-                <input type="submit" class="btn btn-primary" id="botaoLogin"> 
+                <input type="submit" (click)=handleLogin() class="btn btn-primary" id="botaoLogin">       
+            </form>
         </div>
     </div>
 </div>

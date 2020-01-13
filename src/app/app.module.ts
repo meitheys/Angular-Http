@@ -11,6 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FornecedorComponent } from './fornecedor/fornecedor.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthGuardComponent } from './auth-guard/auth-guard.component';
+import { AuthGuard } from './auth-guard/Auth.guard';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,9 @@ import { LoginComponent } from './login/login.component';
     FornecedorComponent,
     HeaderComponent,
     LoginComponent,
+    PageNotFoundComponent,
+    AuthGuardComponent,
+    IndexComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

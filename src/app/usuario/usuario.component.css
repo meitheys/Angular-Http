@@ -7,7 +7,8 @@
     .nameInput, .passwordInput{
         /* margin-left: 35%; */
     /* width: 30%; */
-        opacity: 0.9;
+    transition: all 0.5s;
+    opacity: 0.9;
     }
     
     .linhaLogin{
@@ -16,8 +17,10 @@
         margin-left: 40%;
     }
     
-    .nameInput:hover{
+    .nameInput:focus{
         opacity: 1;
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
     }
     
     #emailHelp{
@@ -28,8 +31,10 @@
         opacity: 0.9;
     }
     
-    .passwordInput:hover{
+    .passwordInput:focus{
         opacity: 1;
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
     }
     
     .buttonRegist{
