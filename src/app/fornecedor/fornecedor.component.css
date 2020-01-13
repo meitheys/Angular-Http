@@ -22,8 +22,17 @@
     margin-left: 40%;
 }
 
-.nameInput:hover{
+.nameInput:focus{
     opacity: 1;
+}
+
+.focus{
+    transition: all 0.5s;
+}
+
+.focus:focus{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 #razaoHelp{
@@ -60,3 +69,18 @@
 .registro{
     margin-left: 38%;
 }
+
+.tabelazinha{
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+.td{
+    height: 70px;
+    
+}
+
+.th{
+    font-size: 25px;
+}
+

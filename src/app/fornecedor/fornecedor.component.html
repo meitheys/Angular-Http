@@ -2,50 +2,61 @@
     <div class="row">
         <div class="col-12 boxLogin">
             <h1 class="registro">Provider Sign Up</h1>
-    <hr>
-    <br>
-  <form  #usuarioForm="ngForm" (ngSubmit)="onSubmit()">
-  <input type="text" required="required" class="form-control nameInput" id="login" [(ngModel)]="fornecedor.razao" name="razao" placeholder="Razão Social">
-    <small id="razaoHelp" class="form-text text-muted">Put your social reason here</small>
-      <br>
-    <input type="text" required="required" class="form-control nameInput" id="login" [(ngModel)]="fornecedor.cnpj" name="cnpj" placeholder="CNPJ">
-        <small id="cnpjHelp" class="form-text text-muted">Put your cnpj here</small>
+            <hr>
             <br>
-    <input type="text" required="required" class="form-control passwordInput" [(ngModel)]="fornecedor.nome" name="nome" placeholder="Nome">
-        <small id="nomeHelp" class="form-text text-muted">Put your name here</small>
-        <br>          
-    <input type="text" class="form-control passwordInput" placeholder="Endereço" [(ngModel)]="fornecedor.endereco" name="endereco" id="endereco">
-        <small id="enderecoHelp" class="form-text text-muted">Put your adress here</small>
-            <br>
-    <input type="text" class="form-control passwordInput" placeholder="Telefone" [(ngModel)]="fornecedor.telefone" name="telefone" id="telefone">
-        <small id="telefoneHelp" class="form-text text-muted">Put your name here</small>    
-            <br>
-    <input type="text" class="form-control passwordInput" placeholder="Email" [(ngModel)]="fornecedor.email" name="email" id="email">
-        <small id="emailHelp" class="form-text text-muted">Put your email here</small>
-        <br>
+            <form #usuarioForm="ngForm" (ngSubmit)="onSubmit()">
+                <input type="text" required="required" class="form-control nameInput focus" id="login"
+                    [(ngModel)]="fornecedor.razao" name="razao" placeholder="Razão Social">
+                <small id="razaoHelp" class="form-text text-muted">Put your social reason here</small>
+                <br>
+                <input type="text" required="required" class="form-control nameInput focus" id="login"
+                    [(ngModel)]="fornecedor.cnpj" name="cnpj" placeholder="CNPJ">
+                <small id="cnpjHelp" class="form-text text-muted">Put your cnpj here</small>
+                <br>
+                <input type="text" required="required" class="form-control passwordInput focus"
+                    [(ngModel)]="fornecedor.nome" name="nome" placeholder="Nome">
+                <small id="nomeHelp" class="form-text text-muted">Put your name here</small>
+                <br>
+                <input type="text" class="form-control passwordInput focus" placeholder="Endereço"
+                    [(ngModel)]="fornecedor.endereco" name="endereco" id="endereco">
+                <small id="enderecoHelp" class="form-text text-muted">Put your adress here</small>
+                <br>
+                <input type="text" class="form-control passwordInput focus" placeholder="Telefone"
+                    [(ngModel)]="fornecedor.telefone" name="telefone" id="telefone">
+                <small id="telefoneHelp" class="form-text text-muted">Put your name here</small>
+                <br>
+                <input type="text" class="form-control passwordInput focus" placeholder="Email"
+                    [(ngModel)]="fornecedor.email" name="email" id="email">
+                <small id="emailHelp" class="form-text text-muted">Put your email here</small>
+                <br>
                 <hr class="linhaLogin">
-    <input type="submit" class="btn btn-primary buttonRegist" onclick="shake()" >
-    </form>
-      
+                <input type="submit" class="btn btn-primary buttonRegist" onclick="shake()">
+            </form>
 
+            <table class="table-striped tabelazinha">
+                <thead>
+                    <tr>
+                        <th class="th">Razão</th>
+                        <th class="th">CNPJ</th>
+                        <th class="th">Nome</th>
+                        <th class="th">Endereço</th>
+                        <th class="th">Telefone</th>
+                        <th class="th">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let fornecedor of fornecedores">
+                        <td class="td">{{ fornecedor.razao }}</td>
+                        <td>{{ fornecedor.cnpj }}</td>
+                        <td>{{ fornecedor.nome }}</td>
+                        <td>{{ fornecedor.endereco }}</td>
+                        <td>{{ fornecedor.telefone }}</td>
+                        <td>{{ fornecedor.email }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
 
-<table class="table-striped tabelazinha">
-    <thead>
-        <tr>
-            <th>Usuario</th>
-              <th>Senha</th>
-              <th>Uuid</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let fornecedor of fornecedores">
-            <td>{{ usuario.login }}</td>
-            <td>{{ usuario.senha }}</td>
-            <td>{{ usuario.uuid }}</td>
-        </tr>
-    </tbody>
-</table>
-
-</div>
-</div>
-<div>
+        <a href="#" id="scroll" style="display: none;"><span></span></a>
