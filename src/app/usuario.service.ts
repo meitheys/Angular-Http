@@ -26,4 +26,9 @@ export class UsuarioService {
     return this.http.get<Usuario[]>(`${this.url+'/findUsuarios'}`);
   }
 
+  deleteUsuario(id: number): Observable<any> {
+    return this.http.delete(this.url+'/delete/'+`${id}`, { responseType: 'text' });
+    console.log('APAGANDO USUARIO DE ID:')
+  }
+
 }

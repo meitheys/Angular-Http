@@ -38,6 +38,9 @@ export class UsuarioComponent implements OnInit {
     this.save();    
   }
 
+  deleteUsuario(id: number) {
+    this.usuarioService.deleteUsuario(id).subscribe(data => { console.log(data), error => console.log(error); })
+  }
   
 
 

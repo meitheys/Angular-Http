@@ -15,6 +15,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AuthGuardComponent } from './auth-guard/auth-guard.component';
 import { AuthGuard } from './auth-guard/Auth.guard';
 import { IndexComponent } from './index/index.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { IndexComponent } from './index/index.component';
     PageNotFoundComponent,
     AuthGuardComponent,
     IndexComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,

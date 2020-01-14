@@ -1,55 +1,69 @@
-
 <div class="container rounded total">
   <div class="row">
-<div class="col-12 boxLogin">
+    <div class="col-12 boxLogin">
 
-    <h1 class="registro">Sign Up</h1>
-    <hr>
-  <br>
-    <form  #usuarioForm="ngForm" (ngSubmit)="onSubmit()">
-    <input type="text" required="required" class="form-control nameInput" id="login" [(ngModel)]="usuario.login" name="login" placeholder="Login">
-      <small id="emailHelp" class="form-text text-muted">Put your login here</small>
+      <h1 class="registro">Sign Up</h1>
+      <hr>
+      <br>
+      <form #usuarioForm="ngForm" (ngSubmit)="onSubmit()">
+        <input type="text" required="required" class="form-control nameInput" id="login" [(ngModel)]="usuario.login"
+          name="login" placeholder="Login">
+        <small id="emailHelp" class="form-text text-muted">Put your login here</small>
         <br>
-        
-    <input type="password" required="required" class="form-control passwordInput" [(ngModel)]="usuario.senha" name="senha" placeholder="Password">
-    <br>
-        <br>
-    <input type="text" class="form-control passwordInput" placeholder="UUID" [(ngModel)]="usuario.uuid" id="uuid">
-        <br>
-          <br>
-          <hr class="linhaLogin">
-            <input type="submit" class="btn btn-primary buttonRegist" onclick="shake()" >
-         
-          </form>
-</div>
-</div>
 
-   <div class="row">
-     <div class="col-12">
-    <table class="table-striped tabelazinha">
-      <thead>
+        <input type="password" required="required" class="form-control passwordInput" [(ngModel)]="usuario.senha"
+          name="senha" placeholder="Password">
+        <br>
+        <br>
+        <input type="text" class="form-control passwordInput" placeholder="UUID" [(ngModel)]="usuario.uuid" id="uuid">
+        <br>
+        <br>
+        <hr class="linhaLogin">
+        <input type="submit" class="btn btn-primary buttonRegist" onclick="shake()">
+
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <table class="table-striped tabelazinha" id="minhaTabela">
+        <thead>
           <tr>
-              <th class="th">Usuario</th>
-                <th class="th">Senha</th>
-                <th class="th">Uuid</th>
+            <th class="th">Usuario</th>
+            <th class="th">Senha</th>
+            <th class="th">Id</th>
           </tr>
-      </thead>
-      <tbody>
+        </thead>
+        <tbody>
           <tr *ngFor="let usuario of usuarios">
-              <td class="td">{{ usuario.login }}</td>
-              <td class="td">{{ usuario.senha }}</td>
-              <td class="td">{{ usuario.uuid }}</td>
+            <td class="td">{{ usuario.login }}</td>
+            <td class="td">{{ usuario.senha }}</td>
+            <td class="td">{{ usuario.id }}</td>
+            <input type="button" class="btn btn-success seleciona" onclick=myFunction() id="{{usuario.login}}">
+            <input type="button" class="btn btn-danger exclui" click="deleteUsuario(id)">
           </tr>
-      </tbody>
-  </table>
-</div>
-</div>
+        </tbody>
+      </table>
+
+      <input type="button" class="btn btn-light" id="visualizarDados">
+
+      <input type="text" class="form-control">
+      <br>
+      <input type="text" class="form-control">
+      <br>
+      <input type="text" class="form-control">
+      <br>
+      <input type="button" class="btn btn-success">
+      <br>
+
+    </div>
+  </div>
 </div>
 
 
 <!-- <div class="container">
       <div class="box"> -->
-             
-                <!-- </div>
+
+<!-- </div>
                 </div> -->
-        

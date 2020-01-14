@@ -1,42 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Login } from '../login/login';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { AutenticarService } from '../autenticar.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+
+export class AuthService implements CanActivate {
   
-  sessionAttribute = 'authenticatedUser';
+  constructor(private router: Router,
+    private authService: AutenticarService) { }
 
-  public nome: String;
-  public senha: String;
-  private authenticatedUsuary: boolean = false;
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    if (this.authService.isUserLoggedIn())
+      return true;
 
-  constructor(private http: HttpClient) { }
+    this.router.navigate(['login']);
+    return false;
 
-  authService(nome: String, senha: String){
-    return this.http.get(`http://localhost:8080/valida/auth`,
-    { headers: { authorization: this.createToken(nome, senha) } }).pipe(map((res) => {
-      this.nome = nome;
-      this.senha = senha;
-      this.authenticatedUsuary = true;
-    }));
   }
-
-  createToken(nome: String, senha: String){
-    return '=> ' + window.btoa(nome + "|" + senha)
-  }
-
-  logout() {
-    sessionStorage.removeItem(this.sessionAttribute);
-    this.nome = null;
-    this.senha = null;
-  }
-
-  LoggedUser(){
-    return this.authenticatedUsuary;
-  }
-
 }

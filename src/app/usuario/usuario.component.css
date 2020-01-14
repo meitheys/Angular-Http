@@ -79,3 +79,24 @@
 		-moz-box-shadow: 2px 2px 8px #999;
 			box-shadow: 2px 2px 8px #999;	
     }
+
+    .seleciona, .exclui{
+        border-radius: 5px;
+        width: 40%;
+        margin-top: 30%;
+    }
+
+    .seleciona{
+        background-color: #15d64f;
+        -webkit-box-shadow: 2px 2px 5px #999; 
+		-moz-box-shadow: 2px 2px 5px #999;
+			box-shadow: 2px 2px 5px #999;	
+    }
+
+    .exclui{
+        margin-left: 10%;
+        background-color: #db2c2c;
+           -webkit-box-shadow: 2px 2px 5px #999; 
+		-moz-box-shadow: 2px 2px 5px #999;
+			box-shadow: 2px 2px 5px #999;	
+    }

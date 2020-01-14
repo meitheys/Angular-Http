@@ -1,1 +1,13 @@
-<nav id="navigation"><img src="../../assets/logoHBSIS.png" id="hbLogo"><span id="spanNavigation"></span></nav>
+<!-- <nav id="navigation"><img src="../../assets/logoHBSIS.png" routerLink="/index" id="hbLogo"><span id="spanNavigation"></span>
+<li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+<li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+</nav> -->
+
+<div class="header">
+    <img src="../../assets/logoHBSIS.png" class="logo" routerLink="/index" id="hbLogo">
+    <div class="header-right">
+      <!-- <a class="active" href="#home">Home</a> -->
+      <a class="active" *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" href="#contact">Login</a>
+      <a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" href="#about">Logout</a>
+    </div>
+  </div>
